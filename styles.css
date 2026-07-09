@@ -891,7 +891,7 @@ body {
 .top-strip {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
   min-height: 2.25rem;
   padding: 0.45rem clamp(1rem, 4vw, 3rem);
@@ -900,12 +900,7 @@ body {
   font-size: 0.78rem;
   font-weight: 850;
   text-transform: uppercase;
-}
-
-.top-strip a {
-  color: var(--white);
-  text-decoration: none;
-  text-transform: none;
+  white-space: nowrap;
 }
 
 .status-dot {
@@ -1100,6 +1095,38 @@ body {
   background: var(--cream);
 }
 
+.intro {
+  padding-block: clamp(2.3rem, 4vw, 3.7rem);
+}
+
+.intro-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.22fr) minmax(18rem, 0.78fr);
+  gap: clamp(1.2rem, 4vw, 3rem);
+  align-items: start;
+  max-width: var(--max);
+  margin-inline: auto;
+}
+
+.intro-copy .eyebrow {
+  margin-bottom: 0.85rem;
+}
+
+.intro-copy h2 {
+  max-width: 22ch;
+  font-size: clamp(2rem, 3vw, 3.1rem);
+}
+
+.intro-copy p:not(.eyebrow) {
+  max-width: 42rem;
+  margin: 1.15rem 0 0;
+  color: var(--muted);
+}
+
+.intro-layout .check-list {
+  padding-top: 2.1rem;
+}
+
 .services,
 .reviews {
   background: var(--cream-2);
@@ -1211,9 +1238,31 @@ details,
 
 .review-card {
   display: grid;
-  gap: 1rem;
+  gap: 0.9rem;
   padding: 1.35rem;
   background: var(--white);
+}
+
+.review-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.google-mark {
+  display: inline-grid;
+  width: 1.6rem;
+  height: 1.6rem;
+  place-items: center;
+  background: conic-gradient(from -45deg, #4285f4 0 25%, #34a853 0 50%, #fbbc05 0 75%, #ea4335 0 100%);
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 0.95rem;
+  font-weight: 950;
+  line-height: 1;
 }
 
 .stars {
@@ -1399,13 +1448,9 @@ details,
   }
 
   .top-strip {
-    gap: 0.5rem;
-    padding-inline: 0.9rem;
-    font-size: 0.62rem;
-  }
-
-  .top-strip a {
-    white-space: nowrap;
+    min-height: 2.15rem;
+    padding-inline: 0.7rem;
+    font-size: clamp(0.58rem, 2.45vw, 0.7rem);
   }
 
   .site-header {
@@ -1482,6 +1527,18 @@ details,
     width: 100%;
     margin: 0;
     padding: 1rem;
+  }
+
+  .intro-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-copy h2 {
+    max-width: none;
+  }
+
+  .intro-layout .check-list {
+    padding-top: 0;
   }
 
   .sticky-actions,
