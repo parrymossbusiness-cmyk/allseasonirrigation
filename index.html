@@ -181,24 +181,44 @@
           <a href="#estimate">Schedule service</a>
           <a href="tel:+15550187425">(555) 018-7425</a>
         </div>
-        <aside class="rating-panel" aria-label="Customer rating">
-          <strong>4.9</strong>
-          <span>Sample homeowner rating</span>
-        </aside>
       </section>
 
-      <section class="intro band" aria-labelledby="intro-title">
-        <div class="intro-layout">
-          <div class="intro-copy">
-            <p class="eyebrow">Built for homeowners, property managers and small commercial sites</p>
-            <h2 id="intro-title">A sprinkler company website should answer the real buying question: will this crew protect my landscape?</h2>
-            <p>All Season Irrigation Systems positions the company around clean installation, balanced coverage and practical water savings. The content is structured so search engines and AI answer engines can clearly identify the service, the problem solved and the next step.</p>
+      <section class="estimate" id="estimate" aria-labelledby="estimate-title">
+        <div class="estimate-panel">
+          <div>
+            <p class="eyebrow">Ready for a greener, easier lawn?</p>
+            <h2 id="estimate-title">Request an irrigation estimate from All Season Irrigation Systems.</h2>
+            <p>Tell us whether you need installation, repair, seasonal maintenance or a water-saving upgrade. We will follow up with next steps.</p>
           </div>
-          <ul class="check-list">
-            <li>Clear residential and light commercial irrigation services</li>
-            <li>Fast calls to action for estimate-ready visitors</li>
-            <li>Service definitions written in natural search language</li>
-          </ul>
+          <form class="lead-form" action="mailto:hello@allseasonirrigationsystems.com" method="post" enctype="text/plain">
+            <label>
+              Name
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" autocomplete="tel" required>
+            </label>
+            <label>
+              Service needed
+              <select name="service" required>
+                <option value="">Choose one</option>
+                <option>New sprinkler installation</option>
+                <option>Sprinkler repair</option>
+                <option>Smart controller setup</option>
+                <option>Seasonal startup or winterization</option>
+              </select>
+            </label>
+            <label>
+              Project details
+              <textarea name="details" rows="4" placeholder="Tell us about dry spots, leaks, install goals or timing."></textarea>
+            </label>
+            <button class="button primary" type="submit">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              Send request
+            </button>
+            <p class="form-note">Prefer to talk? Call <a href="tel:+15550187425">(555) 018-7425</a>.</p>
+          </form>
         </div>
       </section>
 
@@ -347,44 +367,6 @@
         </div>
       </section>
 
-      <section class="estimate" id="estimate" aria-labelledby="estimate-title">
-        <div class="estimate-panel">
-          <div>
-            <p class="eyebrow">Ready for a greener, easier lawn?</p>
-            <h2 id="estimate-title">Request an irrigation estimate from All Season Irrigation Systems.</h2>
-            <p>Tell us whether you need installation, repair, seasonal maintenance or a water-saving upgrade. We will follow up with next steps.</p>
-          </div>
-          <form class="lead-form" action="mailto:hello@allseasonirrigationsystems.com" method="post" enctype="text/plain">
-            <label>
-              Name
-              <input type="text" name="name" autocomplete="name" required>
-            </label>
-            <label>
-              Phone
-              <input type="tel" name="phone" autocomplete="tel" required>
-            </label>
-            <label>
-              Service needed
-              <select name="service" required>
-                <option value="">Choose one</option>
-                <option>New sprinkler installation</option>
-                <option>Sprinkler repair</option>
-                <option>Smart controller setup</option>
-                <option>Seasonal startup or winterization</option>
-              </select>
-            </label>
-            <label>
-              Project details
-              <textarea name="details" rows="4" placeholder="Tell us about dry spots, leaks, install goals or timing."></textarea>
-            </label>
-            <button class="button primary" type="submit">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-              Send request
-            </button>
-            <p class="form-note">Prefer to talk? Call <a href="tel:+15550187425">(555) 018-7425</a>.</p>
-          </form>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
